@@ -23,7 +23,7 @@ jobs:
       - run: npm run build
       - aws-s3/sync:
           from: build
-          to: 'hit-parade-pmo234'
+          to: 's3://hit-parade-pmo234/'
           arguments: |
             --cache-control "max-age=86400" \
 workflows:
